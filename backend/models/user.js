@@ -5,7 +5,8 @@ const user = new Schema({
     name: String,
     email: String,
     username: String,
-    auth0_id: String
+    auth0_id: String,
+    isAdmin: Boolean
 })
 
 module.exports = mongoose.model('User', user)

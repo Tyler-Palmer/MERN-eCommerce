@@ -31,5 +31,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "proxy": {
+    "/auth/callback": {
+      "target": "http://localhost:9000"
+    },
+    "/api": {
+      "target": "http://localhost:9000"
+    }
   }
 }
