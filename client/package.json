@@ -15,7 +15,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "now-start": "node server/index.js",
+    "deploy": "now --public --dotenv=.env.prod -d"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,5 +41,8 @@
     "/api": {
       "target": "http://localhost:9000"
     }
-  }
+  },
+  "now": {
+    "alias": "mern-store"
+   }
 }
