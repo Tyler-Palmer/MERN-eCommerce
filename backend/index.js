@@ -9,6 +9,7 @@ const app = express()
 const morgan = require('morgan')
 const mongoose = require('mongoose')
 const PORT = process.env.PORT || 9000
+
 //Controllers
 const adminController = require('./controllers/admin_controller')
 const cloudinaryController = require('./controllers/cloudinary_controller')
