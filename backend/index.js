@@ -54,7 +54,7 @@ setTimeout(() => {
 
 //Database
 mongoose.connect(
-    process.env.CONNECTION_STRING || 'mongodb://localhost:27017/mern-ecommerce',
+    'mongodb://localhost:27017/mern-ecommerce',
     { useNewUrlParser: true },
     () => {
         console.log(`Db...dB Connected!`)

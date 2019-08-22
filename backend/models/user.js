@@ -3,9 +3,12 @@ const Schema = mongoose.Schema
 
 const user = new Schema({
     name: String,
+    nickname: String,
     email: String,
     username: String,
+    picture: String,
     auth0_id: String,
+    sub: String,
     isAdmin: Boolean
 })
 

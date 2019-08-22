@@ -34,14 +34,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": {
-    "/auth/callback": {
-      "target": "http://localhost:9000"
-    },
-    "/api": {
-      "target": "http://localhost:9000"
-    }
-  },
+  "proxy": "http://localhost:9000",
   "now": {
     "alias": "mern-store"
    }

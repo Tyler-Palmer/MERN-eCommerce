@@ -4,11 +4,12 @@ const User = require('../models/user')
 module.exports = {
     //Get all Admin Users
     getAdminUsers(req, res, next) {
-        User.find({}).exec((err, users) => {
+        User.find((err, users) => {
             if (err) {
                 res.status(500)
                 return next(err)
             } else {
+                console.log(users)
                 return res.status(200).send(users)
             }
         })
@@ -33,17 +34,28 @@ module.exports = {
     },
 
     //Update Product
+    // updateProduct(req, res, next) {
+    //     const { id } = req.params
+    //     Product.findById(id).exec((err, updatedProduct) => {
+    //         if(err){
+    //             res.status(500)
+    //             return next(err)
+    //         } else {
+    //             updatedProduct.name = name
+    //             updatedProduct.description = description
+    //             updatedProduct.price = price
+    //             return res.status(202).send(updatedProduct)
+    //         }
+    //     })
+    // },
+
     updateProduct(req, res, next) {
-        const { id } = req.params
-        Product.findById(id).exec((err, updatedProduct) => {
+        Product.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true }, (err, update) => {
             if(err){
                 res.status(500)
                 return next(err)
             } else {
-                updatedProduct.name = name
-                updatedProduct.description = description
-                updatedProduct.price = price
-                return res.status(202).send(updatedProduct)
+                return res.status(202).send(update)
             }
         })
     },
