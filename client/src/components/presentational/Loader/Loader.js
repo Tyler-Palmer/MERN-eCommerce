@@ -1,9 +1,10 @@
 import React from 'react'
+import './Loader.css'
 
-function Loader(){
+const Loader = props => {
     return(
-        <div>
-
+        <div className="loader-div">
+            <h3>Loading...</h3>
         </div>
     )
 }
