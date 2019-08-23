@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import './Home.css'
+import Loader from '../../presentational/Loader/Loader'
+import ProductCard from '../../presentational/ProductCard/ProductCard'
 
 class Home extends Component {
     constructor() {
@@ -31,7 +33,7 @@ class Home extends Component {
                 <div className='home container'>
                     <div className='home-products container'>
                         {products.length
-                            ? products.map(product => <p>{product.name}</p>)
+                            ? products.map(product => <ProductCard key={product.id} {...product} />)
                             : null}
                     </div>
                 </div>
