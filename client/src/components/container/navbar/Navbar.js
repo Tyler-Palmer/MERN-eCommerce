@@ -1,15 +1,17 @@
 import React, { Component } from 'react'
 import './Navbar.css'
+import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 
 class Navbar extends Component {
     render() {
         return (
             <div className='nav container'>
                 <div className='desktop-nav'>
-                    <p className='nav-link'>Home</p>
-                    <p className='nav-link'>About</p>
-                    <p className='nav-link'>Cart</p>
-                    <p className='nav-link'>Login</p>
+                    <Link className="nav-link" to='/'>Home</Link>
+                    <Link className="nav-link" to='/about'>About</Link>
+                    <Link className="nav-link" to='/cart'>Cart</Link>
+                    <Link className='nav-link'>Login</Link>
                 </div>
             </div>
         )
