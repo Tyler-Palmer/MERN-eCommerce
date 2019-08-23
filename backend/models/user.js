@@ -6,9 +6,8 @@ const user = new Schema({
     nickname: String,
     email: String,
     username: String,
-    picture: String,
+    profile_picture: String,
     auth0_id: String,
-    sub: String,
     isAdmin: Boolean
 })
 

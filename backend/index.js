@@ -38,7 +38,7 @@ setTimeout(() => {
     // app.get('/api/user-data', userController.readUserData)
     // app.post('/api/user-data/cart', userController.addToCart)
     // app.delete('/api/user-data/cart/:id', userController.removeFromCart)
-    // app.post('/api/login', userController.login)
+    app.get('/auth/callback', userController.login);
     // app.post('/api/logout', userController.logout)
 
     //Product Endpoints
