@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './Navbar.css'
 import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 class Navbar extends Component {
     render() {
@@ -18,4 +19,10 @@ class Navbar extends Component {
     }
 }
 
-export default Navbar
+const mapStateToProps = state => {
+    return {
+        user: state.user
+    }
+}
+
+export default withRouter(connect(mapStateToProps)(Navbar))
