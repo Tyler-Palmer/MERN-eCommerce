@@ -17,7 +17,7 @@ class App extends Component {
           } else {
             dispatch(logout())
           }
-        }).catch(console.log('login/logout error--------', err))
+        }).catch(err => console.log('login/logout componentDidMount error--------', err))
     }
     render() {
         return (
